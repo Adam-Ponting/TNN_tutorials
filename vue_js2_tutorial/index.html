@@ -14,11 +14,11 @@
       <h1>Keyboard Events</h1>
 
       <label for="name">name:</label>
-      <!-- enter key event -->
-      <input type="text" id="name" @keyup.enter="logName" />
+      <input type="text" id="name" v-model="name" />
+      <span>{{ name }}</span>
       <label for="name">Age:</label>
-      <!-- chaining modifiers to require alt+enter -->
-      <input type="text" id="age" @keyup.alt.enter="logAge" />
+      <input type="text" id="age" v-model="age" />
+      <span>{{ age }}</span>
     </div>
     <script src="app.js"></script>
   </body>
