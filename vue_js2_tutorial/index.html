@@ -11,13 +11,22 @@
   </head>
   <body>
     <div id="vue-app">
-      <h1>Computed Properties</h1>
-      <button @click="a++">Add to A</button>
-      <button @click="b++">Add to B</button>
-      <p>A = {{ a }}</p>
-      <p>B = {{ b }}</p>
-      <p>Age + A = {{ addToA }}</p>
-      <p>Age + B = {{ addToB }}</p>
+      <h1>Dynamic CSS</h1>
+      <h2>Example 1</h2>
+      <!-- class as object -->
+      <div
+        @click="isAvailable = !isAvailable"
+        :class="{available: isAvailable}"
+      >
+        <span>Ryu</span>
+      </div>
+      <h2>Example 2</h2>
+      <button @click="isNearby = !isNearby">Toggle nearby</button>
+      <button @click="isAvailable = !isAvailable">Toggle available</button>
+      <!-- class as computed object -->
+      <div :class="computedClasses">
+        <span>Ryu</span>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
