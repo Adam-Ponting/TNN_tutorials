@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue js tutorials</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- add vue as a script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <h1>Looping with v-for</h1>
+
+      <h1>Conditionals</h1>
+      <button @click="error = !error">toggle error</button>
+      <button @click="success = !success">toggle success</button>
+
+      <!-- v-if toggle element in/out of DOM -->
+      <p v-if="error">There was an error</p>
+      <p v-else-if="success">SUCCESS!!</p>
+
+      <!-- v-show sets display: none -->
+      <p v-show="error">I'm and error</p>
+      <p v-show="success">Woo success!!!!!!!</p>
+
+      <h1>Dynamic CSS</h1>
+      <h2>Example 1</h2>
+      <!-- class as object -->
+      <div
+        @click="isAvailable = !isAvailable"
+        :class="{available: isAvailable}"
+      >
+        <span>Ryu</span>
+      </div>
+      <h2>Example 2</h2>
+      <button @click="isNearby = !isNearby">Toggle nearby</button>
+      <button @click="isAvailable = !isAvailable">Toggle available</button>
+      <!-- class as computed object -->
+      <div :class="computedClasses">
+        <span>Ryu</span>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
