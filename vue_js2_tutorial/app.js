@@ -19,6 +19,9 @@ new Vue({
         updateXY(e){ // event gets passed by default from eventlistener
             this.x = e.offsetX;
             this.y = e.offsetY;
+        },
+        click() {
+            alert('You clicked me')
         }
     }
 })
