@@ -1,21 +1,11 @@
 new Vue({
     el: '#vue-app', // element to control
     data: { // data holds key: value pairs
-     isAvailable: false,
-     isNearby: false,
-     error: false,
-     success: false
-    },
-    methods: {
-     
-    },
-    computed: {
-     computedClasses() {
-        //  returns an object
-        return {
-            available: this.isAvailable,
-            nearby: this.isNearby
-        }
-     }
+        characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
+        ninjas: [
+            { name:'Ryu', age: 25 },
+            { name:'Yoshi', age: 35 },
+            { name:'Ken', age: 55 }
+        ]
     }
 })

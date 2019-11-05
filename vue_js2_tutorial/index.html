@@ -12,35 +12,29 @@
   <body>
     <div id="vue-app">
       <h1>Looping with v-for</h1>
-
-      <h1>Conditionals</h1>
-      <button @click="error = !error">toggle error</button>
-      <button @click="success = !success">toggle success</button>
-
-      <!-- v-if toggle element in/out of DOM -->
-      <p v-if="error">There was an error</p>
-      <p v-else-if="success">SUCCESS!!</p>
-
-      <!-- v-show sets display: none -->
-      <p v-show="error">I'm and error</p>
-      <p v-show="success">Woo success!!!!!!!</p>
-
-      <h1>Dynamic CSS</h1>
-      <h2>Example 1</h2>
-      <!-- class as object -->
-      <div
-        @click="isAvailable = !isAvailable"
-        :class="{available: isAvailable}"
-      >
-        <span>Ryu</span>
-      </div>
-      <h2>Example 2</h2>
-      <button @click="isNearby = !isNearby">Toggle nearby</button>
-      <button @click="isAvailable = !isAvailable">Toggle available</button>
-      <!-- class as computed object -->
-      <div :class="computedClasses">
-        <span>Ryu</span>
-      </div>
+      <!-- array of strings -->
+      <ul>
+        <li v-for="(character, index) in characters" :key="index">
+          {{ index }}. {{ character }}
+        </li>
+      </ul>
+      <!-- array of objects -->
+      <ul>
+        <li v-for="(ninja, index) in ninjas" :key="index">
+          {{ index }}. {{ ninja.name }} - {{ ninja.age }}
+        </li>
+      </ul>
+      <!-- v-for creating on a template - no :key !!! -->
+      <template v-for="(ninja, index) in ninjas">
+        <h3>{{ index }}. {{ ninja.name }}</h3>
+        <p>{{ ninja.age }}</p>
+      </template>
+      <!-- v-for on an object with unknown number of key:value pairs -->
+      <template v-for="ninja in ninjas">
+        <div v-for="(val, key, index) in ninja">
+          value: {{ val }} key: {{ key }} index: {{ index }}
+        </div>
+      </template>
     </div>
     <script src="app.js"></script>
   </body>
