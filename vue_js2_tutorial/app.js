@@ -2,7 +2,9 @@ new Vue({
     el: '#vue-app', // element to control
     data: { // data holds key: value pairs
      isAvailable: false,
-     isNearby: false
+     isNearby: false,
+     error: false,
+     success: false
     },
     methods: {
      

@@ -11,6 +11,20 @@
   </head>
   <body>
     <div id="vue-app">
+      <h1>Looping with v-for</h1>
+
+      <h1>Conditionals</h1>
+      <button @click="error = !error">toggle error</button>
+      <button @click="success = !success">toggle success</button>
+
+      <!-- v-if toggle element in/out of DOM -->
+      <p v-if="error">There was an error</p>
+      <p v-else-if="success">SUCCESS!!</p>
+
+      <!-- v-show sets display: none -->
+      <p v-show="error">I'm and error</p>
+      <p v-show="success">Woo success!!!!!!!</p>
+
       <h1>Dynamic CSS</h1>
       <h2>Example 1</h2>
       <!-- class as object -->
