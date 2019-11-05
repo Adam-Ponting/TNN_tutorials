@@ -10,20 +10,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="vue-app">
-      <!-- bag image changes when ended is true -->
-      <div id="bag" :class="{ burst: ended}"></div>
-      <!-- bag health -->
-      <div id="bag-health">
-        <!-- sets width as a % -->
-        <div :style="{ width: health + '%' }"></div>
-      </div>
-      <!-- game controls -->
-      <div id="controls">
-        <button @click="punch" v-show="!ended">Punch</button>
-        <button @click="restart">Restart</button>
-      </div>
-    </div>
+    <div id="vue-app"></div>
     <script src="app.js"></script>
   </body>
 </html>
