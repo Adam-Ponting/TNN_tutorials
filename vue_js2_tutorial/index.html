@@ -10,7 +10,15 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="vue-app"></div>
+    <div id="vue-app-one">
+      <h2>{{ title }}</h2>
+      <p>{{ greeting }}</p>
+    </div>
+    <div id="vue-app-two">
+      <h2>{{ title }}</h2>
+      <p>{{ greeting }}</p>
+      <button @click="changeTitle">Changes app one title from app two</button>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
