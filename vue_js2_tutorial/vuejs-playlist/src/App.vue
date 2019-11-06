@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <h1>{{title}}</h1>
+    <app-header></app-header>
     <!-- use ninjas component -->
-    <ninjas></ninjas>
+    <app-ninjas></app-ninjas>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import Ninjas from "@/components/Ninjas.vue"; // import Ninjas component
+import Header from "@/components/Header.vue"; // import Ninjas component
+import Footer from "@/components/Footer.vue"; // import Ninjas component
 
 export default {
   components: {
-    ninjas: Ninjas // register Ninjas component as ninjas
+    "app-header": Header, // register Header as app-header
+    "app-ninjas": Ninjas,
+    "app-footer": Footer
   },
   data() {
     return {
