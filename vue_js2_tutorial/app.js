@@ -1,3 +1,19 @@
+// creating a component:
+
+Vue.component('greeting', { // 'component name', object
+    template: '<p>Hello there, I\'m {{ name }}. <button @click="changeName">change name</button></p>',
+    data() { // data is a function in components so each time it's references it's unicue to that instance
+        return {
+            name: 'Yoshi'
+        }  
+    },
+    methods: { // method will only change data in the component where its clicked
+        changeName(){
+            this.name = 'Mario'
+        }
+    }
+})
+
 // create two instances of vue to control different area of the webpage
 // the variable names (one/two) can allow each instance to reference the other
 var one = new Vue ({
@@ -6,7 +22,7 @@ var one = new Vue ({
         title: 'Vue app one'
     },
     computed: {
-        greeting() {
+        greet() {
             return 'Hello from app one'
         }
     }
@@ -23,7 +39,7 @@ var two = new Vue ({
         }
     },
     computed:{
-        greeting() {
+        greet() {
             return 'Yo dudes, app two here'
         }
     }
