@@ -1,16 +1,15 @@
 <template>
-  <div id="app">
+  <div>
     <app-header></app-header>
-    <!-- use ninjas component -->
-    <app-ninjas></app-ninjas>
+    <app-ninjas :ninjas="ninjas"></app-ninjas>
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
 import Ninjas from "@/components/Ninjas.vue"; // import Ninjas component
-import Header from "@/components/Header.vue"; // import Ninjas component
-import Footer from "@/components/Footer.vue"; // import Ninjas component
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
@@ -20,19 +19,19 @@ export default {
   },
   data() {
     return {
-      title: "Ninja App!"
+      ninjas: [
+        { name: "Ryu", speciality: "Vue Components", show: false },
+        { name: "Crystal", speciality: "HTML Wizardry", show: false },
+        { name: "Hitoshi", speciality: "Click Events", show: false },
+        { name: "Tango", speciality: "Conditionals", show: false },
+        { name: "Kami", speciality: "Webpack", show: false },
+        { name: "Yoshi", speciality: "Data Diggin", show: false }
+      ]
     };
   },
-  methods: {
-    greeting() {
-      return "hey cowboy";
-    }
-  }
+  methods: {}
 };
 </script>
 
 <style scoped>
-h1 {
-  color: purple;
-}
 </style>
