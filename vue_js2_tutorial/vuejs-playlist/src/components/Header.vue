@@ -1,15 +1,26 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 @click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String,
+      default: "no header",
+      required: true
+    }
+  },
   data() {
-    return {
-      title: "Vue Ninjas"
-    };
+    return {};
+  },
+  methods: {
+    changeTitle() {
+      // primitive data so only edited in this instance
+      this.title = "Vue Wizards";
+    }
   }
 };
 </script>

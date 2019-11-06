@@ -6,6 +6,7 @@
         <h3 v-show="ninja.show">{{ ninja.speciality }}</h3>
       </li>
     </ul>
+    <button @click="deleteNinja">delete ninja</button>
   </div>
 </template>
 
@@ -16,6 +17,12 @@ export default {
       type: Array,
       default: () => [],
       required: true
+    }
+  },
+  methods: {
+    deleteNinja() {
+      // reference data is affected by any and all child components
+      this.ninjas.pop();
     }
   }
 };
