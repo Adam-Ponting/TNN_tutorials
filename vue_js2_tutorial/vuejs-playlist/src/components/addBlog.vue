@@ -62,6 +62,7 @@ export default {
   },
   methods: {
     post() {
+      // post to, with the object to post
       axios
         .post("https://jsonplaceholder.typicode.com/posts", {
           title: this.blog.title,
