@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       blogs: [],
-      search: ""
+      search: "" // used for search filter
     };
   },
   created() {
@@ -31,6 +31,25 @@ export default {
       return this.blogs.filter(blog => {
         return blog.title.match(this.search); // searches for the search string in the blog title
       });
+    }
+  },
+  filters: {
+    // register filter locally
+    toUppercase(value) {
+      // same as 'to-uppercase: function(value){}
+      return value.toUpperCase();
+    }
+  },
+  directives: {
+    rainbow: {
+      // eslint-disable-next-line no-unused-vars
+      bind(el, binding, vnode) {
+        el.style.color =
+          "#" +
+          Math.random()
+            .toString()
+            .slice(2, 8);
+      }
     }
   }
 };

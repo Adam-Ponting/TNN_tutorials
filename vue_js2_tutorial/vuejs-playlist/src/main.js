@@ -10,20 +10,21 @@ export const eventBus = new Vue() // create event bus, to be imported as import 
 
 // filters
 // filters DO NOT alter the data, just how its output
-Vue.filter('to-uppercase', function(value){
-  return value.toUpperCase()
-})
+
+// Vue.filter('to-uppercase', function(value){ // is used locally in showblogs.vue
+//   return value.toUpperCase()
+// })
 Vue.filter('snippet', function(value){
   return value.slice(0, 100) + '...'
 })
 
 // custom directives 
-Vue.directive('rainbow', {
-  // eslint-disable-next-line no-unused-vars
-  bind(el, binding, vnode){
-    el.style.color = '#' + Math.random().toString().slice(2,8)
-  }
-})
+// Vue.directive('rainbow', { // declared locally in showblogs
+//   // eslint-disable-next-line no-unused-vars
+//   bind(el, binding, vnode){
+//     el.style.color = '#' + Math.random().toString().slice(2,8)
+//   }
+// })
 Vue.directive('theme', {
   // eslint-disable-next-line no-unused-vars
   bind(el, binding, vnode){
