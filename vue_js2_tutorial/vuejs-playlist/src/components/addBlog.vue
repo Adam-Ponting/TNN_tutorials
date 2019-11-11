@@ -64,11 +64,15 @@ export default {
     post() {
       // post to, with the object to post
       axios
-        .post("https://jsonplaceholder.typicode.com/posts", {
-          title: this.blog.title,
-          body: this.blog.content,
-          userId: "adamP!"
-        })
+        // .post("https://jsonplaceholder.typicode.com/posts", {
+        .post(
+          "https://tnn-tutorials.firebaseio.com/posts.json",
+          this.blog // send the whole blog as the object, not individually
+          // {
+          //   title: this.blog.title,
+          //   body: this.blog.content,
+          // }
+        )
         .then(data => {
           console.log(data);
           this.submitted = true;
