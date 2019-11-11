@@ -6,7 +6,8 @@ import routes from '@/routes.js'
 Vue.use(VueRouter) // use vue router
 
 const router = new VueRouter({
-  routes:routes // set routes to the routes imported above
+  routes: routes, // set routes to the routes imported above
+  mode: 'history' // set history mode on to remove # in routes
 })
 
 /* START GLOBAL REGISTRATION */
