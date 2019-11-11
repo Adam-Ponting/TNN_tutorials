@@ -23,6 +23,10 @@
       </select>
       <button @click.prevent="post">Add Blog</button>
     </form>
+    <div v-if="error">
+      <p>There was an error: {{error}}</p>
+    </div>
+    <div v-if="completed">{{completed}}</div>
     <div v-if="submitted">
       <h3>Thanks for adding your post</h3>
     </div>
@@ -57,7 +61,9 @@ export default {
         author: ""
       },
       authors: ["The Net Ninja", "The Angular Avenger", "The Vue Vindicator"],
-      submitted: false
+      submitted: false,
+      error: "",
+      completed: ""
     };
   },
   methods: {
@@ -76,7 +82,11 @@ export default {
         .then(data => {
           console.log(data);
           this.submitted = true;
-        });
+        })
+        .catch(error => {
+          this.error = error;
+        })
+        .finally(() => (this.completed = "AXIOS completed"));
     }
   }
 };

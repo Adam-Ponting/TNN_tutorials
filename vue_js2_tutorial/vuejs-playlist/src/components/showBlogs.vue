@@ -31,7 +31,6 @@ export default {
       .then(response => {
         var blogsArray = []; // create an array to hold the fected data
         for (let key in response.data) {
-          //
           response.data[key].id = key; // set the objects id to its key
           blogsArray.push(response.data[key]); // push the object to the array
         }
