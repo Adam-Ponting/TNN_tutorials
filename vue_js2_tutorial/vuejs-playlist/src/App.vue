@@ -1,40 +1,24 @@
 <template>
   <div>
-    <app-header :title="title"></app-header>
-    <app-ninjas :ninjas="ninjas"></app-ninjas>
-    <hr />
-    <app-ninjas :ninjas="ninjas"></app-ninjas>
-    <app-footer :title="title"></app-footer>
+    <app-header></app-header>
+    <!-- show the route declared in vue router  -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Ninjas from "@/components/Ninjas.vue"; // import Ninjas component
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
+import header from "@/components/header.vue";
 
 export default {
   components: {
-    "app-header": Header, // register Header as app-header
-    "app-ninjas": Ninjas,
-    "app-footer": Footer
-  },
-  data() {
-    return {
-      ninjas: [
-        { name: "Ryu", speciality: "Vue Components", show: false },
-        { name: "Crystal", speciality: "HTML Wizardry", show: false },
-        { name: "Hitoshi", speciality: "Click Events", show: false },
-        { name: "Tango", speciality: "Conditionals", show: false },
-        { name: "Kami", speciality: "Webpack", show: false },
-        { name: "Yoshi", speciality: "Data Diggin", show: false }
-      ],
-      title: "Vue Ninjas Prop"
-    };
-  },
-  methods: {}
+    "app-header": header
+  }
 };
 </script>
 
 <style scoped>
+body {
+  margin: 0;
+  font-family: "Nunito Semibold";
+}
 </style>
