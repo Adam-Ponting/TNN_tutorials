@@ -1,5 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueRouter from 'vue-router' // import vue router
+import routes from '@/routes.js'
+
+Vue.use(VueRouter) // use vue router
+
+const router = new VueRouter({
+  routes:routes // set routes to the routes imported above
+})
 
 /* START GLOBAL REGISTRATION */
 // import Ninjas from '@/components/Ninjas.vue' // import to use globally
@@ -45,4 +53,5 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
+  router: router // router = the router declared above
 }).$mount('#app')
