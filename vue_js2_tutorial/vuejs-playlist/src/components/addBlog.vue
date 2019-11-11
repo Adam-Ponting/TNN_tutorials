@@ -6,6 +6,16 @@
       <input type="text" v-model.lazy="blog.title" required />
       <label>Blog Content:</label>
       <textarea v-model.lazy.trim="blog.content"></textarea>
+      <div id="checkboxes">
+        <label for>Ninjas</label>
+        <input type="checkbox" value="ninjas" name id v-model="blog.categories" />
+        <label for>Wizards</label>
+        <input type="checkbox" value="wizards" name id v-model="blog.categories" />
+        <label for>Mario</label>
+        <input type="checkbox" value="mario" name id v-model="blog.categories" />
+        <label for>Cheese</label>
+        <input type="checkbox" value="cheese" name id v-model="blog.categories" />
+      </div>
     </form>
     <div id="preview">
       <h3>Preview blog</h3>
@@ -13,6 +23,10 @@
       <p>Blog content:</p>
       <!-- https://www.w3schools.com/cssref/pr_text_white-space.asp -->
       <p style="white-space: pre">{{ blog.content }}</p>
+      <p>Blog cagetories:</p>
+      <ul>
+        <li v-for="category in blog.categories" :key="category">{{ category }}</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -24,7 +38,8 @@ export default {
     return {
       blog: {
         title: "",
-        content: ""
+        content: "",
+        categories: []
       }
     };
   }
@@ -57,5 +72,12 @@ textarea {
 }
 h3 {
   margin-top: 10px;
+}
+#checkboxes input {
+  display: inline-block;
+  margin-right: 10px;
+}
+#checkboxes label {
+  display: inline-block;
 }
 </style>
