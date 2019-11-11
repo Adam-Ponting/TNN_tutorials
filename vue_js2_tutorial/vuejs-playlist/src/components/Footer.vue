@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      copyright: "Copyright 2019 Vue Ninjas"
+      copyright: "Copyright 2019"
     };
   }
 };

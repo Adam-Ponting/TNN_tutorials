@@ -1,6 +1,7 @@
 <template>
   <div>
-    <app-header :title="title"></app-header>
+    <!-- use $event to receive the data from the child component -->
+    <app-header :title="title" @changeTitle="updateTitle($event)"></app-header>
     <app-ninjas :ninjas="ninjas"></app-ninjas>
     <hr />
     <app-ninjas :ninjas="ninjas"></app-ninjas>
@@ -32,7 +33,12 @@ export default {
       title: "Vue Ninjas Prop"
     };
   },
-  methods: {}
+  methods: {
+    updateTitle(updatedTitle) {
+      // updatedTitle is the $event prop
+      this.title = updatedTitle;
+    }
+  }
 };
 </script>
 

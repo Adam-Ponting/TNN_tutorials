@@ -19,7 +19,8 @@ export default {
   methods: {
     changeTitle() {
       // primitive data so only edited in this instance
-      this.title = "Vue Wizards";
+      // this.title = "Vue Wizards";
+      this.$emit("changeTitle", "Vue-Wizards"); // event name and data to be sent with the event - must be received with $event
     }
   }
 };
