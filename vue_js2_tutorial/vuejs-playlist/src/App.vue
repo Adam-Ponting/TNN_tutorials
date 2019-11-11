@@ -1,12 +1,19 @@
 <template>
   <div>
+    <app-header></app-header>
     <!-- show the route declared in vue router  -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {};
+import header from "@/components/header.vue";
+
+export default {
+  components: {
+    "app-header": header
+  }
+};
 </script>
 
 <style scoped>
