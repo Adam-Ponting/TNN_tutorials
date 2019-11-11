@@ -8,7 +8,7 @@
       <router-link :to="'/blog/' + blog.id">
         <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
       </router-link>
-      <article>{{ blog.body | snippet}}</article>
+      <article>{{ blog.content | snippet}}</article>
     </div>
   </div>
 </template>
@@ -25,16 +25,18 @@ export default {
     };
   },
   created() {
-    axios.get("https://jsonplaceholder.typicode.com/posts").then(response => {
-      this.blogs = response.data.slice(0, 10); // get the first 10 responses
-    });
-  },
-  computed: {
-    // filteredBlogs() { // used as a mixin
-    //   return this.blogs.filter(blog => {
-    //     return blog.title.match(this.search); // searches for the search string in the blog title
-    //   });
-    // }
+    // axios.get("https://jsonplaceholder.typicode.com/posts").then(response => {
+    axios
+      .get("https://tnn-tutorials.firebaseio.com/posts.json")
+      .then(response => {
+        var blogsArray = []; // create an array to hold the fected data
+        for (let key in response.data) {
+          //
+          response.data[key].id = key; // set the objects id to its key
+          blogsArray.push(response.data[key]); // push the object to the array
+        }
+        this.blogs = blogsArray;
+      });
   },
   filters: {
     // register filter locally

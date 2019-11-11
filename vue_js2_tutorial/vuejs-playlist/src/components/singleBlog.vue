@@ -1,7 +1,11 @@
 <template>
   <div id="single-blog">
     <h1>{{ blog.title }}</h1>
-    <article>{{ blog.body }}</article>
+    <article>{{ blog.content }}</article>
+    <p>Author: {{blog.author}}</p>
+    <ul>
+      <li v-for="category in blog.categories" :key="category">{{category}}</li>
+    </ul>
     <div v-if="error">{{error}}</div>
     <div v-if="xfinally">{{xfinally}}</div>
   </div>
@@ -20,7 +24,8 @@ export default {
   },
   created() {
     axios
-      .get("http://jsonplaceholder.typicode.com/posts/" + this.id) // get the post matching route params id
+      // .get("http://jsonplaceholder.typicode.com/posts/" + this.id) // get the post matching route params id
+      .get("https://tnn-tutorials.firebaseio.com/posts/" + this.id + ".json") // get the post matching route params id
       .then(response => {
         this.blog = response.data;
       })
