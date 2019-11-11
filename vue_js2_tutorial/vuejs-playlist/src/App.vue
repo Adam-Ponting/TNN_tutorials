@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- use $event to receive the data from the child component -->
-    <app-header :title="title" @changeTitle="updateTitle($event)"></app-header>
+    <app-header :title="title"></app-header>
     <app-ninjas :ninjas="ninjas"></app-ninjas>
     <hr />
     <app-ninjas :ninjas="ninjas"></app-ninjas>

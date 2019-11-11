@@ -6,6 +6,9 @@ import App from './App.vue'
 // Vue.component('ninjas', Ninjas) // register Ninjas component as ninjas (global registration)
 /* END GLOBAL REGISTRATION */
 
+
+export const eventBus = new Vue() // create event bus, to be imported as import { eventBus } from 'location'
+
 Vue.config.productionTip = false
 
 new Vue({

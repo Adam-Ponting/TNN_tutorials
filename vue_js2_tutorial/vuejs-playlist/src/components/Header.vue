@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { eventBus } from "../main.js";
+
 export default {
   props: {
     title: {
@@ -18,9 +20,9 @@ export default {
   },
   methods: {
     changeTitle() {
-      // primitive data so only edited in this instance
-      // this.title = "Vue Wizards";
-      this.$emit("changeTitle", "Vue-Wizards"); // event name and data to be sent with the event - must be received with $event
+      // this.$emit("changeTitle", "Vue-Wizards"); // event name and data to be sent with the event - must be received with $event
+      this.title = "vue_wizards";
+      eventBus.$emit("titleChanged", this.title);
     }
   }
 };
