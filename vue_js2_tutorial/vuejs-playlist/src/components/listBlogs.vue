@@ -53,7 +53,7 @@ export default {
       }
     }
   },
-  mixins: [searchMixin] // use mixins, declared as array
+  mixins: [searchMixin]
 };
 </script>
 
