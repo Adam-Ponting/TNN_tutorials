@@ -1,42 +1,38 @@
 <template>
   <div>
-    <!-- use $event to receive the data from the child component -->
-    <app-header :title="title"></app-header>
-    <app-ninjas :ninjas="ninjas"></app-ninjas>
-    <hr />
-    <app-ninjas :ninjas="ninjas"></app-ninjas>
-    <app-footer :title="title"></app-footer>
+    <form-helper>
+      <div slot="f-header">
+        <h3>This is the title of the form</h3>
+        <p>Information about the form</p>
+      </div>
+      <div slot="f-fields">
+        <input type="text" placeholder="name" required />
+        <input type="password" placeholder="password" required />
+      </div>
+      <div slot="f-controls">
+        <button @click.prevent="handleSubmit">Submit</button>
+      </div>
+    </form-helper>
   </div>
 </template>
 
 <script>
-import Ninjas from "@/components/Ninjas.vue"; // import Ninjas component
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
+import FormHelper from "@/components/FormHelper.vue"; // import Ninjas component
 
 export default {
   components: {
-    "app-header": Header, // register Header as app-header
-    "app-ninjas": Ninjas,
-    "app-footer": Footer
+    "form-helper": FormHelper
   },
   data() {
     return {
-      ninjas: [
-        { name: "Ryu", speciality: "Vue Components", show: false },
-        { name: "Crystal", speciality: "HTML Wizardry", show: false },
-        { name: "Hitoshi", speciality: "Click Events", show: false },
-        { name: "Tango", speciality: "Conditionals", show: false },
-        { name: "Kami", speciality: "Webpack", show: false },
-        { name: "Yoshi", speciality: "Data Diggin", show: false }
-      ],
-      title: "Vue Ninjas Prop"
+      title: "im a dymanic slot title"
     };
   },
   methods: {
-    updateTitle(updatedTitle) {
-      // updatedTitle is the $event prop
-      this.title = updatedTitle;
+    handleSubmit(e) {
+      // eslint-disable-next-line no-console
+      console.log(e);
+      // alert(e);
     }
   }
 };
