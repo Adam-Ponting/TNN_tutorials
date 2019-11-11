@@ -3,13 +3,13 @@
     <h1>Please fill out our form...</h1>
     <form>
       <div id="form-header">
-        <slot name="f-header"></slot>
+        <slot name="form-header"></slot>
       </div>
       <div id="form-fields">
-        <slot name="f-fields"></slot>
+        <slot name="form-fields"></slot>
       </div>
       <div id="form-controls">
-        <slot name="f-controls"></slot>
+        <slot name="form-controls"></slot>
       </div>
       <div id="useful-links">
         <ul>
@@ -17,13 +17,13 @@
             <a href="#">link 1</a>
           </li>
           <li>
-            <a href="#">link 1</a>
+            <a href="#">link 2</a>
           </li>
           <li>
-            <a href="#">link 1</a>
+            <a href="#">link 3</a>
           </li>
           <li>
-            <a href="#">link 1</a>
+            <a href="#">link 4</a>
           </li>
         </ul>
       </div>
@@ -32,7 +32,14 @@
 </template>
 
 <script>
-export default {};
+// Imports
+export default {
+  components: {},
+  data() {
+    return {};
+  },
+  methods: {}
+};
 </script>
 
 <style scoped>
