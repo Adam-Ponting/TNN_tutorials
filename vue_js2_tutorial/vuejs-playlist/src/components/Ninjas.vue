@@ -24,6 +24,25 @@ export default {
       // reference data is affected by any and all child components
       this.ninjas.pop();
     }
+  },
+  // lifecycle hooks
+  beforeCreate() {
+    alert("beforeCreate");
+  },
+  created() {
+    alert("created");
+  },
+  beforeMount() {
+    alert("beforeMount");
+  },
+  mounted() {
+    alert("mounted");
+  },
+  beforeUpdate() {
+    alert("beforeUpdate");
+  },
+  updated() {
+    alert("updated");
   }
 };
 </script>
