@@ -8,6 +8,15 @@ import App from './App.vue'
 
 export const eventBus = new Vue() // create event bus, to be imported as import { eventBus } from 'location'
 
+// filters
+// filters DO NOT alter the data, just how its output
+Vue.filter('to-uppercase', function(value){
+  return value.toUpperCase()
+})
+Vue.filter('snippet', function(value){
+  return value.slice(0, 100) + '...'
+})
+
 // custom directives 
 Vue.directive('rainbow', {
   // eslint-disable-next-line no-unused-vars
@@ -15,7 +24,6 @@ Vue.directive('rainbow', {
     el.style.color = '#' + Math.random().toString().slice(2,8)
   }
 })
-
 Vue.directive('theme', {
   // eslint-disable-next-line no-unused-vars
   bind(el, binding, vnode){
@@ -24,6 +32,7 @@ Vue.directive('theme', {
     } else if (binding.value === 'narrow') {
       el.style.maxWidth = '500px'
     }
+    // check directive arguments
     if (binding.arg === 'column') {
       el.style.background = '#ddd'
       el.style.padding = '20px'
