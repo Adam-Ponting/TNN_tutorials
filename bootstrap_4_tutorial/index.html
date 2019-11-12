@@ -17,16 +17,186 @@
     />
 
     <title>Hello, world!</title>
-    <style>
-      .row div {
-        padding: 20px 10px;
-        border: 1px solid black;
-      }
-    </style>
   </head>
   <body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home</a>
+            <a class="nav-item nav-link active" href="#">About</a>
+            <a class="nav-item nav-link active" href="#">Training</a>
+            <a class="nav-item nav-link active" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
     <!-- creates fixed container -->
+    <div
+      class="jumbotron jumbotron-fluid bg-info text-white text-center"
+      style="background-color: #aaa;"
+    >
+      <div class="container">
+        <h1 class="display-3">Welcome to the Dojo</h1>
+        <p class="lead">A guiding light for the less enlightened</p>
+      </div>
+    </div>
+    <div class="container text-muted">
+      <!-- cards -->
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <img
+              src="./images/webpack.png"
+              alt=""
+              class="card-img-top img-fluid"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Node.js Training</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                laborum ullam fugit corrupti, repellat, minus repudiandae vel
+                quos voluptates, hic est necessitatibus totam odio eum explicabo
+                ipsam doloribus aperiam adipisci?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <img
+              src="./images/react.png"
+              alt=""
+              class="card-img-top img-fluid"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Node.js Training</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                laborum ullam fugit corrupti, repellat, minus repudiandae vel
+                quos voluptates, hic est necessitatibus totam odio eum explicabo
+                ipsam doloribus aperiam adipisci?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <img
+              src="./images/node.png"
+              alt=""
+              class="card-img-top img-fluid"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Node.js Training</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                laborum ullam fugit corrupti, repellat, minus repudiandae vel
+                quos voluptates, hic est necessitatibus totam odio eum explicabo
+                ipsam doloribus aperiam adipisci?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <img
+              src="./images/mongo.png"
+              alt=""
+              class="card-img-top img-fluid"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Node.js Training</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                laborum ullam fugit corrupti, repellat, minus repudiandae vel
+                quos voluptates, hic est necessitatibus totam odio eum explicabo
+                ipsam doloribus aperiam adipisci?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="display-4 text-center py-5">Meet the speakers</h2>
+      <nav class="nav nav-pills justify-content-center flex-column flex-md-row">
+        <a href="#ninja" class="nav-link active" data-toggle="tab"
+          >The Net Ninja</a
+        >
+        <a href="#wizard" class="nav-link" data-toggle="tab">The Web Wizard</a>
+        <a href="#captain" class="nav-link" data-toggle="tab">Captain Code</a>
+        <a href="#avenger" class="nav-link" data-toggle="tab"
+          >The Angular Avenger</a
+        >
+      </nav>
+      <div class="tab-content py-5">
+        <div class="tab-pane fade show active" id="ninja">
+          <h3>The Net Ninjas</h3>
+          <p>
+            Lorem ipsum
+            <span
+              data-toggle="tooltip"
+              title="This is a tooltip"
+              class="text-info"
+              data-placement="bottom"
+            >
+              dolor sit amet consectetur adipisicing
+            </span>
+            elit. Perspiciatis, commodi officiis laboriosam praesentium
+            assumenda libero ad! Autem repellendus accusamus illo consequuntur
+            porro nisi dolor sit vero consectetur neque, odio mollitia!
+          </p>
+        </div>
+        <div class="tab-pane fade" id="wizard">
+          <h3>The Wizard</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, commodi officiis laboriosam praesentium assumenda
+            libero ad! Autem repellendus accusamus illo consequuntur porro nisi
+            dolor sit vero consectetur neque, odio mollitia!
+          </p>
+        </div>
+        <div class="tab-pane fade" id="captain">
+          <h3>The Captain</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, commodi officiis laboriosam praesentium assumenda
+            libero ad! Autem repellendus accusamus illo consequuntur porro nisi
+            dolor sit vero consectetur neque, odio mollitia!
+          </p>
+        </div>
+        <div class="tab-pane fade" id="avenger">
+          <h3>The Avenger</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis, commodi officiis laboriosam praesentium assumenda
+            libero ad! Autem repellendus accusamus illo consequuntur porro nisi
+            dolor sit vero consectetur neque, odio mollitia!
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="container">
+      <div class="row" style="background: lightblue">
+        <div class="col-md">col-md</div>
+        <div class="col-md">col-md</div>
+        <div class="col-md-6">col-md</div>
+        <div class="col-md">col-md</div>
+      </div>
+      <div
+        class="row justify-content-md-center"
+        style="background: darkgoldenrod"
+      >
+        <div class="col-md-2 order-last">1 col-md-2 order-last</div>
+        <div class="col-md-2 order-first">2 col-md-2 order-first</div>
+        <div class="col-md-2">3 col-md-2</div>
+      </div>
       <div class="row" style="background: lightgreen">
         <div class="col-sm-2">col-sm-2</div>
         <div class="col-sm-10">col-sm-10</div>
@@ -34,8 +204,8 @@
       <div class="row" style="background: pink">
         <div class="col-sm-3 col-md-6">col-sm-3 col-lg-3</div>
         <div class="col-sm-9 col-md-6">col-sm-9 col-lg-9</div>
-        <div class="col-lg-6 col-xl-1">col-lg-6 col-lg-6</div>
-        <div class="col-lg-6 col-xl-11">col-lg-6 col-lg-6</div>
+        <div class="col-lg-6 col-xl-1">col-lg-6 col-xl-1</div>
+        <div class="col-lg-6 col-xl-11">col-lg-6 col-xl-11</div>
       </div>
       <div class="row" style="background: yellow">
         <div class="col-3">col-3</div>
@@ -62,5 +232,12 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- enable tooltips -->
+    <!-- target any element with data-toggle="tooltip" and use the tooltip() method -->
+    <script>
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
