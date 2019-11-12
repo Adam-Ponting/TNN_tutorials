@@ -4,8 +4,14 @@ $(document).ready( () => {
     console.log('jquery loaded')
 })
 
+
+// #5 selectors
 $('#lead-banner') // select #lead-banner
 $('#lead-banner p') // select all p tags in #lead-banner
 $('h3').css({border: '3px solid darkblue'}) // add css example to all h3 tags
 $('.wrapper').css({border: '3px solid red'}) // add css example to all .classes
 $('#clients').css({border: '3px solid green'}) // add css example to #id
+
+// #6 filters
+// https://www.w3schools.com/jquery/trysel.asp
+// https://api.jquery.com/category/selectors/
