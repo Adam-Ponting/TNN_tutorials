@@ -19,13 +19,32 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home</a>
+            <a class="nav-item nav-link active" href="#">About</a>
+            <a class="nav-item nav-link active" href="#">Training</a>
+            <a class="nav-item nav-link active" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
     <!-- creates fixed container -->
     <div
       class="jumbotron jumbotron-fluid bg-info text-white text-center"
       style="background-color: #aaa;"
     >
       <div class="container">
-        <h1 class="display-1">Welcome to the Dojo</h1>
+        <h1 class="display-3">Welcome to the Dojo</h1>
         <p class="lead">A guiding light for the less enlightened</p>
       </div>
     </div>
