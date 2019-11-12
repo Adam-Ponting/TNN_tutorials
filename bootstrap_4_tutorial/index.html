@@ -139,10 +139,18 @@
         <div class="tab-pane fade show active" id="ninja">
           <h3>The Net Ninjas</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis, commodi officiis laboriosam praesentium assumenda
-            libero ad! Autem repellendus accusamus illo consequuntur porro nisi
-            dolor sit vero consectetur neque, odio mollitia!
+            Lorem ipsum
+            <span
+              data-toggle="tooltip"
+              title="This is a tooltip"
+              class="text-info"
+              data-placement="bottom"
+            >
+              dolor sit amet consectetur adipisicing
+            </span>
+            elit. Perspiciatis, commodi officiis laboriosam praesentium
+            assumenda libero ad! Autem repellendus accusamus illo consequuntur
+            porro nisi dolor sit vero consectetur neque, odio mollitia!
           </p>
         </div>
         <div class="tab-pane fade" id="wizard">
@@ -224,5 +232,12 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- enable tooltips -->
+    <!-- target any element with data-toggle="tooltip" and use the tooltip() method -->
+    <script>
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
