@@ -28,6 +28,7 @@ window.onload = function() {
 
     function cbFriends(data){ 
         console.log('success', data)
+        
         $.ajax({
             type: "GET",
             url: "./data/videos.json",
